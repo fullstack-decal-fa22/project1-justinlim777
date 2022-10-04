@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" contnet="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Website</title>
+        <author>Justin Lim</author>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <h1>Justin Lim</h1>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <h5>Student</h5>
+                    <h2>My name is <span>Justin</span>. <br>I am an aspiring Software Engineer.</h2>
+                </div>
+            </div>
+        </div>
+        <div id="about">
+            <div class = 'container'>
+                <div class ='aboutsec'>
+                    <h3>About Me</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit 
+                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+                        occaecat cupidatat non proident, sunt in culpa qui officia 
+                        deserunt mollit anim id est laborum.</p>
+                        <div class="tabTitles">
+                            <h5 class="tablink active" onclick="opentab('skills')">Skills</h5>
+                            <h5 class="tablink" onclick="opentab('projects/experience')">Projects/Experience</h5>
+                            <h5 class="tablink" onclick="opentab('education')">Education</h5>
+                        </div>
+                        <div class = 'tabContents active-tab' id="skills">
+                            <ul>
+                                <li><span>Python</span><br>High Level</li>
+                                <li><span>Web Development</span><br>High Level</li>
+                            </ul>
+                        </div>
+                        <div class = 'tabContents' id = 'projects/experience'>
+                            <ul>
+                                <li><span>2022-Present</span><br>NASA JPL Engineering Intern</li>
+                                <li><span>Gitlet</span><br>Mini version of Git</li>
+                            </ul>
+                        </div>
+                        <div class = 'tabContents' id = 'education'>
+                            <ul>
+                                <li><span>2020-2024</span><br>Computer Science BA from UC Berkeley</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact">
+            <div class="grid-container">
+                    <div class = "grid1">
+                        <h4 class="sub-title">Contact Me</h4>
+                        <h6>justin777@berkeley.edu</h6>
+                        <h6>+1 626-554-5998</h6>
+                    </div>
+                    <div class = 'grid2'>
+                        <a href="https://www.linkedin.com/in/jumstemlim" class="button">Linkedin</a>
+                    </div>
+            </div>
+        </div>
+        <script>
+            var tablink = document.getElementsByClassName('tablink');
+            var tabContents = document.getElementsByClassName('tabContents');
+            function opentab(tabName){
+                for (tab of tablink){
+                    tab.classList.remove('active');
+                }
+                for (content of tabContents){
+                    content.classList.remove('active-tab');
+                }
+                event.currentTarget.classList.add('active');
+                document.getElementById(tabName).classList.add('active-tab')
+            }
+        </script>
+    </body>
+</html>
